@@ -38,10 +38,12 @@ id       name     provider   state    directory
 e91f356  honeypot virtualbox running  /Users/user/week9/mhn
 Confirm the IP addresses of each. The values below are statically assigned in the Vagrant file, so your output should match the below:
  ```
+ ```
 $ vagrant ssh server -c "hostname -I | cut -d' ' -f2" 2>/dev/null
-# 10.254.254.100
+10.254.254.100
 $ vagrant ssh honeypot -c "hostname -I | cut -d' ' -f2" 2>/dev/null
-# 10.254.254.101
+10.254.254.101
+```
 * Open shell on server:
 ```
 $ vagrant ssh server
